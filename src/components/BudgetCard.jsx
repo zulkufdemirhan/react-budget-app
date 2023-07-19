@@ -10,6 +10,7 @@ export default function BudgetCard({ name, amount, max, gray }) {
   } else if (gray) {
     classNames.push("bg-light")
   }
+  
   return (
     <Card className={classNames.join("")}>
       <Card.Body>
