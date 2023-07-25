@@ -1,6 +1,6 @@
 # Getting Started with Create React App with Vite
 
-Getting Started with [Vitejs](https://vitejs.dev/guide/).  
+Create with [Vitejs](https://vitejs.dev/guide/).  
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
