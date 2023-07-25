@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { UNCATEGORIZED_BUDGET_ID, useBudgets } from "../contexts/BudgetsContext";
 
 export default function AddExpenseModal({ show, handleClose, defaultBudgetId }) {
-  const descriptionRef = useRef()
+  const description = useRef()
   const amountRef = useRef()
   const budgetIdRef = useRef()
   const { addExpense, budgets } = useBudgets()
@@ -11,7 +11,7 @@ export default function AddExpenseModal({ show, handleClose, defaultBudgetId }) 
   function handleSubmit(e) {
     e.preventDefault()
     addExpense({
-      descriptionRef: descriptionRef.current.value,
+      description: description.current.value,
       amount: parseFloat(amountRef.current.value),
       budgetId: budgetIdRef.current.value,
     })
@@ -28,7 +28,7 @@ export default function AddExpenseModal({ show, handleClose, defaultBudgetId }) 
           <Form.Group className="mb-3" controlId="description">
             <Form.Label>Description</Form.Label>
             <Form.Control 
-              ref={descriptionRef} 
+              ref={description} 
               type="text" 
               required 
             />
